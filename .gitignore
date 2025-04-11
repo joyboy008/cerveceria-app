@@ -1,0 +1,18 @@
+# Node
+node_modules
+.env
+
+# Build
+dist
+build
+
+# SQLite DB
+*.sqlite
+*.db
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
