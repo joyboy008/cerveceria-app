@@ -56,9 +56,11 @@ App disponible en http://localhost:5173 (o el puerto de Vite)
 
     POST /auth/login → Login de usuario
 
-    GET /breweries → Obtener cervecerías
+    GET /breweries/all → Obtener todas cervecerías
 
-    GET /breweries/search?query=xxx → Buscar cervecerías
+    GET /breweries/state → Buscar cervecerías por localidad california
+
+    GET /breweries/:id → Buscar cerveceria por ID
 
 🛡️ Autenticación
 
