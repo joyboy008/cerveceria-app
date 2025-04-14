@@ -1,4 +1,4 @@
-import express, { RequestHandler } from 'express';
+import { RequestHandler } from 'express';
 import jwt from 'jsonwebtoken';
 
 const JWT_SECRET = 'clave_secreta_super_segura';

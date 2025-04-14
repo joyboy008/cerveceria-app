@@ -1,0 +1,28 @@
+/* Banner de alerta tipo Happy Hour */
+.alert-banner {
+    display: flex;
+    align-items: center;
+    background-color: #ffe9c9;
+    border-left: 4px solid #ff7f0e;
+    padding: 10px 16px;
+    gap: 10px;
+    font-family: sans-serif;
+    word-wrap: none;
+    width: 95%;
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+}
+
+.alert-content strong {
+    display: block;
+    color: #000;
+    font-size: 1rem;
+}
+
+.alert-content p {
+    margin: 0;
+    color: #333;
+    font-size: 0.875rem;
+}
