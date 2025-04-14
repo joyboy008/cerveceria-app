@@ -1,4 +1,4 @@
-import bar from "../../assets/imgs/bar.jpg";
+import bar from "../../assets/imgs/bar-cali.jpg";
 import svgLocation from "../../assets/imgs/map-pin.svg";
 import svgPhone from "../../assets/imgs/phone.svg";
 import "./stylesBreaweriesIdComponent.css";
@@ -33,13 +33,13 @@ export const BreweriesIdComponent = ({ brewery }: any) => {
           </p>
         </div>
       </div>
-      <div className="">
-        <div className="">
-          <img className="" src={bar} alt="bar" width={"100px"} />
-          <img className="" src={bar} alt="bar" width={"100px"} />
-          <img className="" src={bar} alt="bar" width={"100px"} />
-          <img className="" src={bar} alt="bar" width={"100px"} />
-          <img className="" src={bar} alt="bar" width={"100px"} />
+      <div className="carousel-wrapper">
+        <div className="carousel-container">
+          <img className="carrusel-item" src={bar} alt="bar" />
+          <img className="carrusel-item" src={bar} alt="bar" />
+          <img className="carrusel-item" src={bar} alt="bar" />
+          <img className="carrusel-item" src={bar} alt="bar" />
+          <img className="carrusel-item" src={bar} alt="bar" />
         </div>
       </div>
     </div>

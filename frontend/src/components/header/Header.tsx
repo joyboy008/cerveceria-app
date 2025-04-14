@@ -4,6 +4,7 @@ import user from "../../assets/imgs/user.svg";
 import left from "../../assets/imgs/arrow-left.svg";
 import { useAuth } from "../../context/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const { logout } = useAuth();
@@ -41,7 +42,7 @@ export const Header = () => {
           </button>
         )}
         <div>
-          <a className="navbar-brand" href="#">
+          <Link to={""} className="navbar-brand">
             <img
               className="m-1"
               src={bell}
@@ -49,16 +50,16 @@ export const Header = () => {
               width={16}
               height={16}
             />
-          </a>
-          <a onClick={handleOnLogout} className="navbar-brand" href="#">
+          </Link>
+          <Link to={""} onClick={handleOnLogout} className="navbar-brand">
             <img
               className="m-1"
               src={user}
               alt="usuario"
               width={16}
               height={16}
-            />
-          </a>
+            />{" "}
+          </Link>
         </div>
       </div>
     </nav>

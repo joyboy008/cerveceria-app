@@ -1,8 +1,8 @@
 import { FormEvent, useState } from "react";
-import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 import { Navigate } from "react-router-dom";
 import { LoginComponent } from "../components/login/LoginComponent";
+import { postLogin, postRegister } from "../api/axios";
 
 const Login = () => {
   const { login } = useAuth();
@@ -18,17 +18,11 @@ const Login = () => {
     e.preventDefault();
     try {
       if (isRegisterMode) {
-        await axios.post("http://localhost:4000/auth/register", {
-          username,
-          password,
-        });
+        await postRegister(username, password);
         setError("Cuenta creada. Ahora inicia sesión.");
         setIsRegisterMode(false);
       } else {
-        const res = await axios.post("http://localhost:4000/auth/login", {
-          username,
-          password,
-        });
+        const res = await postLogin(username, password);
         login(res.data.token, username);
       }
     } catch (err: any) {
@@ -37,7 +31,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <section className="contenedor-login">
       <LoginComponent
         username={username}
         setUsername={setUsername}
@@ -48,7 +42,7 @@ const Login = () => {
         isRegisterMode={isRegisterMode}
         setIsRegisterMode={setIsRegisterMode}
       />
-    </>
+    </section>
   );
 };
 

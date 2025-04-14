@@ -27,7 +27,7 @@ export const CardBar = ({ restaurante, title }: Props) => {
           <div className="card mb-3 rounded" key={brew.id}>
             <h2> {brew.name} </h2>
             <div className="items-container">
-              <div className="">
+              <div className="imgItem">
                 <img src={bar} alt="bar" width={"64px"} />
               </div>
               <div className="">

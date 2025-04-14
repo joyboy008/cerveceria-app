@@ -1,5 +1,13 @@
 .navbar {
     background-color: #010316 !important;
+    width: 100%;
+}
+
+.container-fluid {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .buttonHeader {

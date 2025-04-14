@@ -7,13 +7,6 @@ import db from "../db";
 const router = Router();
 const JWT_SECRET = "clave_secreta_super_segura";
 
-interface RegisterRequest extends Request {
-  body: {
-    username: string;
-    password: string;
-  };
-}
-
 interface AuthBody {
   username: string;
   password: string;
@@ -25,7 +18,6 @@ interface DBUser {
   password: string;
 }
 
-// Registro
 router.post(
   "/register",
   async (req: Request<{}, {}, AuthBody>, res: Response): Promise<void> => {
@@ -54,7 +46,6 @@ router.post(
   }
 );
 
-// Login
 router.post("/login", (req: Request<{}, {}, AuthBody>, res: Response): void => {
   const { username, password } = req.body;
 

@@ -11,19 +11,42 @@ h2 {
     font-weight: 700;
 }
 
-.cards-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 1rem 0;
-    scroll-behavior: smooth;
-    width: 45vh;
+
+
+@media (max-width: 480px) {
+    .cards-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 1rem 0;
+        scroll-behavior: smooth;
+        min-width: 320px;
+        width: 100%;
+        /* max-width: 55vh; */
+    }
+}
+
+
+@media (min-width: 480px) {
+    .cards-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 1rem 0;
+        scroll-behavior: smooth;
+        width: 100%;
+    }
+}
+
+.imgItem img {
+    border-radius: 50%;
 }
 
 .card {
-    flex: 0 0 auto;
 
+    flex: 0 0 auto;
     border: none !important;
     scroll-snap-align: start;
     background-color: #1e1e2f;
@@ -53,8 +76,6 @@ h2 {
     justify-content: center;
 
 }
-
-
 
 .button {
     border-radius: .25rem;

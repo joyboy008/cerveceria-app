@@ -1,3 +1,64 @@
 .items-contenedor {
     object-fit: cover;
+    width: 200px
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carrusel-item {
+    flex: 0 0 auto;
+    width: 140px;
+    border-radius: 12px;
+    scroll-snap-align: center;
+}
+
+.carousel-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+
+.carrusel-item img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+@media (max-width: 480px) {
+    .cards-wrapper {
+        width: 100%;
+    }
+
+    .carousel-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        padding: 1rem;
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 480px) {
+    cards-wrapper {
+        width: 100%;
+    }
+
+    .carousel-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        padding: 1rem;
+        width: 100%;
+    }
+
+
 }

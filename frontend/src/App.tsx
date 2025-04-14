@@ -1,36 +1,12 @@
-// src/App.tsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Breweries from "./pages/Breweries";
+import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import Login from "./pages/Login";
-import PrivateRoute from "./components/PrivateRouter";
-import { BreweriesId } from "./pages/BreweriesId";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <PrivateRoute>
-                <Breweries />
-              </PrivateRoute>
-            }
-          />
-
-          <Route
-            path="/perid/:id"
-            element={
-              <PrivateRoute>
-                <BreweriesId />
-              </PrivateRoute>
-            }
-          />
-          <Route path="/login" element={<Login />} />
-          <Route path="/*" element={<Login />} />
-        </Routes>
+        <AppRoutes />
       </BrowserRouter>
     </AuthProvider>
   );

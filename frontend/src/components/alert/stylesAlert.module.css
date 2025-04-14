@@ -1,5 +1,5 @@
 /* Banner de alerta tipo Happy Hour */
-.alert-banner {
+.banner {
     display: flex;
     align-items: center;
     background-color: #ffe9c9;
@@ -11,17 +11,17 @@
     width: 95%;
 }
 
-.alert-icon {
+.icon {
     font-size: 1.5rem;
 }
 
-.alert-content strong {
+.content strong {
     display: block;
     color: #000;
     font-size: 1rem;
 }
 
-.alert-content p {
+.content p {
     margin: 0;
     color: #333;
     font-size: 0.875rem;
