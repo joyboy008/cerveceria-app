@@ -1,5 +1,6 @@
 import svgLocation from "../../assets/imgs/map-pin.svg";
 import svgPhone from "../../assets/imgs/phone.svg";
+import './stylesCardBar.css'
 
 interface Props {
   address: string;
@@ -11,7 +12,7 @@ interface Props {
 export const CardBarInfo = ({ address, city, state, phone }: Props) => (
   <>
     <div className="address">
-      <img className="m-1" src={svgLocation} alt="Ubicación" width={16} />
+      <img className="" src={svgLocation} alt="Ubicación" width={16} />
       <p className="text-ellipsis">
         {address}, {city}, {state}
       </p>
