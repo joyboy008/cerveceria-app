@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bar from "../../assets/imgs/bar.jpg";
+import bar from "../../assets/imgs/bar.png";
 import { CardBarInfo } from "./CardBarInfo";
 import { Brewery } from "../../types/brewery";
 
