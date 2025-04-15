@@ -13,7 +13,6 @@ export const Footer = () => {
       </Link>
       <Link to={"/"} className="btns">
         <img src={home} alt="home" />
-
         <span>Inicio</span>
       </Link>{" "}
       <Link to={""} className="btns">

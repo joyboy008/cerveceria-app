@@ -5,15 +5,8 @@ import { CardBar } from "../components/cardbar/CardBar";
 import { DefaultLayout } from "../components/defaultlayout/DefaultLayout";
 import { Alert } from "../components/alert/Alert";
 import { Loader } from "../components/loader/Loader";
-
-interface Brewery {
-  id: string;
-  name: string;
-  address_1: string;
-  city: string;
-  phone: string;
-  state: string;
-}
+import { LoadMoreButton } from "../components/morebutton/LoadMoreButton";
+import { Brewery } from "../types/brewery";
 
 export default function Breweries() {
   const [breweries, setBreweries] = useState<Brewery[]>([]);
@@ -21,6 +14,11 @@ export default function Breweries() {
     []
   );
   const [loading, setLoading] = useState(true);
+  const [visibleAll, setVisibleAll] = useState(4);
+  const [visibleCalifornia, setVisibleCalifornia] = useState(4);
+
+  const loadMoreAll = () => setVisibleAll((prev) => prev + 4);
+  const loadMoreCalifornia = () => setVisibleCalifornia((prev) => prev + 4);
 
   const { state } = useAuth();
 
@@ -59,11 +57,28 @@ export default function Breweries() {
         <Loader />
       ) : (
         <section className="cards-main">
-          <CardBar title="Todas las opciones" restaurante={breweries} />
+          <CardBar
+            title="Todas las opciones"
+            restaurante={breweries.slice(0, visibleAll)}
+          />
+          {visibleAll < breweries.length && (
+            <LoadMoreButton
+              onClick={loadMoreAll}
+              isVisible={visibleAll < breweries.length}
+            />
+          )}
+
           <CardBar
             title="Opciones en California"
-            restaurante={breweriesInCalifornia}
+            restaurante={breweriesInCalifornia.slice(0, visibleCalifornia)}
           />
+          {visibleCalifornia < breweriesInCalifornia.length && (
+            <LoadMoreButton
+              onClick={loadMoreCalifornia}
+              isVisible={visibleCalifornia < breweriesInCalifornia.length}
+              text="Más bares..."
+            />
+          )}
         </section>
       )}
     </DefaultLayout>

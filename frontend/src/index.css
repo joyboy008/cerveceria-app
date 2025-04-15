@@ -50,6 +50,7 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 8px;
 }
 
 .breweries-component {
@@ -68,17 +69,16 @@ h1 {
 }
 
 
-
-@media (min-width: 1450px) {
-  .cards-main {
-    align-items: center;
-  }
-}
-
-
 .contenedor-login {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.container-button-mas {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 95%;
 }
