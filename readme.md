@@ -12,7 +12,7 @@ Una aplicación fullstack sencilla hecha con **React + Node.js + TypeScript + SQ
 - 💾 Persistencia en SQLite
 - 💡 Frontend optimizado para móviles
 - 🧪 Pruebas unitarias para endpoints y middleware
-
+- ✅ Boton para agregar mas resultados de busquedas al final del carrousel
 ---
 
 ## 🧱 Tecnologías

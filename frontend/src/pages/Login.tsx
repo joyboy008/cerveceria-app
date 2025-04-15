@@ -16,6 +16,7 @@ const Login = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (username === "" || password === "") return
     try {
       if (isRegisterMode) {
         await postRegister(username, password);

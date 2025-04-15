@@ -25,7 +25,6 @@ router.post(
 
     try {
       const hash = await bcrypt.hash(password, 10);
-
       db.run(
         "INSERT INTO users (username, password) VALUES (?, ?)",
         [username, hash],
