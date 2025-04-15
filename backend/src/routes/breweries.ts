@@ -8,7 +8,7 @@ const router = Router();
 router.get("/all", verifyToken, async (_req: Request, res: Response) => {
   try {
     const response = await axios.get(
-      "https://api.openbrewerydb.org/v1/breweries?per_page=4"
+      "https://api.openbrewerydb.org/v1/breweries"
     );
     res.json(response.data);
   } catch (error) {
@@ -22,7 +22,7 @@ router.get(
   async (_req: Request, res: Response): Promise<void> => {
     try {
       const response = await axios.get(
-        `https://api.openbrewerydb.org/v1/breweries?by_state=california&per_page=4`
+        `https://api.openbrewerydb.org/v1/breweries?by_state=california`
       );
       res.json(response.data);
     } catch (error) {
