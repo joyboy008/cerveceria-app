@@ -11,12 +11,14 @@ Una aplicación fullstack sencilla hecha con **React + Node.js + TypeScript + SQ
 - ✅ Rutas protegidas con React Router + Context API
 - 💾 Persistencia en SQLite
 - 💡 Frontend optimizado para móviles
+- 🧪 Pruebas unitarias para endpoints y middleware
 
 ---
 
 ## 🧱 Tecnologías
 
 ### Frontend
+
 - React
 - TypeScript
 - React Router
@@ -24,11 +26,13 @@ Una aplicación fullstack sencilla hecha con **React + Node.js + TypeScript + SQ
 - Axios
 
 ### Backend
+
 - Node.js
 - Express
 - TypeScript
 - SQLite3
 - JWT + bcrypt
+- Jest
 
 ---
 
@@ -40,16 +44,50 @@ Una aplicación fullstack sencilla hecha con **React + Node.js + TypeScript + SQ
 cd backend
 npm install
 npm run dev
+```
+
 Servidor corriendo en http://localhost:4000
 
+### ✨ Frontend
 
+```bash
 cd frontend
 npm install
 npm run dev
-App disponible en http://localhost:5173 (o el puerto de Vite)
+```
 
+App disponible en http://localhost:5173
 
---- 
+---
+
+🧪 Pruebas
+
+El backend incluye pruebas unitarias con Jest para los siguientes endpoints y middleware:
+📌 Endpoints probados:
+
+    POST /auth/register
+
+    POST /auth/login/:id
+
+    GET /breweries/all
+
+    GET /breweries/state?state=california
+
+    GET /breweries/:id
+
+🔐 Middleware probado:
+
+    Autenticación con verifyToken (manejo de tokens JWT)
+
+▶️ Ejecutar pruebas:
+
+```bash
+cd backend
+npm run test
+```
+
+---
+
 🔑 Endpoints útiles
 
     POST /auth/register → Registro de usuario
@@ -62,13 +100,13 @@ App disponible en http://localhost:5173 (o el puerto de Vite)
 
     GET /breweries/:id → Buscar cerveceria por ID
 
+---
+
 🛡️ Autenticación
 
     Se usa JWT para proteger rutas del backend.
 
     El frontend usa useContext + localStorage para manejar sesión.
-
-
 
 👨‍💻 Autor
 

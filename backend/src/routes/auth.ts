@@ -2,7 +2,7 @@
 import { Router, Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import db from "../db";
+import db from "../db/db";
 
 const router = Router();
 const JWT_SECRET = "clave_secreta_super_segura";

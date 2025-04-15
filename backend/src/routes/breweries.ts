@@ -12,7 +12,6 @@ router.get("/all", verifyToken, async (_req: Request, res: Response) => {
     );
     res.json(response.data);
   } catch (error) {
-    console.error("Error al obtener cervecerías:", error);
     res.status(500).json({ error: "No se pudieron obtener las cervecerías" });
   }
 });
@@ -27,7 +26,6 @@ router.get(
       );
       res.json(response.data);
     } catch (error) {
-      console.error("Error en la búsqueda de cervecerías:", error);
       res.status(500).json({ error: "Error al buscar cervecerías" });
     }
   }
@@ -45,8 +43,7 @@ router.get(
       );
       res.json(response.data);
     } catch (error) {
-      console.error("Error en la búsqueda de cervecerías:", error);
-      res.status(500).json({ error: "Error al buscar cervecerías" });
+      res.status(404).json({ error: "Error al buscar 1 cervecería" });
     }
   }
 );
