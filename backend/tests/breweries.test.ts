@@ -7,7 +7,7 @@ beforeAll(async () => {
   // ✅ Usa un usuario que ya exista en tu base de datos
   const res = await request(app).post("/auth/login").send({
     username: "user",
-    password: "1234",
+    password: "Abc123.!",
   });
 
   token = res.body.token;
@@ -15,6 +15,7 @@ beforeAll(async () => {
 
 // TEST breweries/all
 describe("GET /breweries/all", () => {
+  console.log(token)
   it("debería responder con status 200 y un array de cervecerías", async () => {
     const res = await request(app)
       .get("/breweries/all")

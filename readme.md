@@ -85,6 +85,18 @@ El backend incluye pruebas unitarias con Jest para los siguientes endpoints y mi
 cd backend
 npm run test
 ```
+Recuerda modificar esta funcion en /test/breweries/ con un username y password ya almacenados en la base de datos.
+```
+beforeAll(async () => {
+  // ✅ Usa un usuario que ya exista en tu base de datos
+  const res = await request(app).post("/auth/login").send({
+    username: "user",
+    password: "Abc123.!",
+  });
+
+  token = res.body.token;
+});
+```
 
 ---
 
