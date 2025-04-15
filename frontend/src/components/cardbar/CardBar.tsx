@@ -20,7 +20,7 @@ interface Props {
 
 export const CardBar = ({ restaurante, title }: Props) => {
   return (
-    <section className="cards mt-3">
+    <section className="cards m-3">
       <h1 className="text-xl font-bold mb-4"> {title} </h1>
       <div className="cards-carousel">
         {restaurante.map((brew) => (

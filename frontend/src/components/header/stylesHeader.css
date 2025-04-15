@@ -12,4 +12,11 @@
 
 .buttonHeader {
     background: transparent;
+    border: none;
 }
+
+/* @media (min-width: 992px) {
+    .navbar .container-fluid {
+        justify-content: end;
+    }
+} */

@@ -23,7 +23,12 @@ h2 {
         scroll-behavior: smooth;
         min-width: 320px;
         width: 100%;
-        /* max-width: 55vh; */
+    }
+
+    .cards-carousel .card {
+        width: 90%;
+        max-width: 350px;
+        /* background-color: red; */
     }
 }
 
@@ -52,7 +57,7 @@ h2 {
     background-color: #1e1e2f;
     border-radius: 1rem;
     padding: 1rem;
-    width: 40vh;
+    width: 350px;
     color: white;
     background-color: #13132d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);

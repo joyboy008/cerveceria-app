@@ -1,13 +1,20 @@
-import { DefaultLayout } from "../defaultlayout/DefaultLayout";
+import "./stylesLoader.css";
 
 export const Loader = () => {
   return (
-    <section className="contenedor-general">
+    <section className="contenedor-loader">
       <section className="loader">
-        <div className="spinner-border text-info" role="status">
-          <span className="visually-hidden">🍺</span>
+        <div className="center-body">
+          <div className="loader-spanne-20">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <span className="text-info">Cargando cervecerías... 🍺</span>
       </section>
     </section>
   );

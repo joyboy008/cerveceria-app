@@ -10,7 +10,6 @@ router.get("/all", verifyToken, async (_req: Request, res: Response) => {
     const response = await axios.get(
       "https://api.openbrewerydb.org/v1/breweries?per_page=4"
     );
-    console.log(response.data);
     res.json(response.data);
   } catch (error) {
     console.error("Error al obtener cervecerías:", error);
